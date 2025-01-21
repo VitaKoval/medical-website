@@ -1,35 +1,43 @@
 :root{
-    //font
-    --main-font-family: 'OpenSans', sans-serif;
-    
-// Text colors
-    --text-white: rgba(255, 255, 255, 100);
-    --text-black: rgba(0, 0, 0, 100);
-    --text-primary: rgba(0, 0, 0, 0.87);
-    --text-secondary: rgba(0, 0, 0, 0.54);
-    --text-secondary-dark-mode: rgba(255, 255, 255, 0.7);
-    --text-disabled: rgba(0, 0, 0, 0.38);
-    --text-field: rgba(0, 0, 0, 0.42);
+//Font
+    --main-font-family: 'Manrope', sans-serif;
 
 //Colors
-    --default-dark: #303030;
-    --default-light: #FAFAFA;
-    --default-disabled: #9797973D;
-    --paper-dark: #424242;
-    --primary-main: #673AB7;
-    --secondary-main: #00BCD4;
-    --primary-light: #D1C4E9;
-    --secondary-light: #B2EBF2;
-    --primary-dark: #0D47A1;
-    --secondary-dark: #006064;
+    --primary-50: #eff9ff;
+    --primary-100: #def1ff;
+    --primary-200: #b6e6ff;
+    --primary-300: #75d4ff;
+    --primary-400: #2cbeff;
+    --primary-500: #00a4f4;
+    --primary-600: #0084d4;
+    --primary-700: #0069ab;
+    --primary-800: #00598d;
+    --primary-900: #064a74;
+    --primary-950: #042f4d;
 
+    --neutrals-0: #ffffff;
+    --neutrals-50: #f6f6f6;
+    --neutrals-100: #e7e7e7;
+    --neutrals-200: #d1d1d1;
+    --neutrals-300: #b0b0b0;
+    --neutrals-400: #888888;
+    --neutrals-500: #6d6d6d;
+    --neutrals-600: #5d5d5d;
+    --neutrals-700: #4f4f4f;
+    --neutrals-800: #454545;
+    --neutrals-900: #3d3d3d;
+    --neutrals-950: #000000;
+
+//Box-shadows
+    --box-shadow-btn: -8px 8px 28px rgba(0, 0, 0, 0.06);
+    --box-shadow-dropdown: 0px 4px 16px rgba(10, 13, 20, 0.32), 0px 16px 56px rgba(10, 13, 20, 0.48), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+//Gradients
+    --liner-gradient-btn: linear-gradient(101.91deg, #A7E2FF 0%, #0095DE 87.74%);
+
+//Transition
     --transition-duration: 0.3s;
-
-    // box-shadow
-    --box-shadow-header: 0 5px 10px rgb(0 0 0 / 25%)
-    --box-shadow-dropdown: 0px 4px 16px rgba(10, 13, 20, 0.32), 0px 16px 56px rgba(10, 13, 20, 0.48), 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
-
 // .container
 //   width: 1674px
 //   max-width: 100%

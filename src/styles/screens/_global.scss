@@ -10,17 +10,17 @@
 }
 
 html {
-  font-size: 1.5rem;
+  font-size: 1rem;
   scroll-behavior: smooth;
 }
 
 body {
   box-sizing: border-box;
   font-family: var(--main-font-family);
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.5;
-  color: var(--text-secondary-dark-mode);
-  background-color: var(--default-dark);
+  color: var(--neutrals-500);
+  background-color: var(--neutrals-0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,13 +36,9 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--secondary-main);
-  transition: color 0.3s ease;
+  color: var(--neutrals-500);
+  transition: color var(--transition-duration) ease;
   cursor: pointer;
-
-  // &:hover {
-  //   color: var(--color-secondary);
-  // }
 }
 
 a, 
@@ -91,19 +87,19 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.875rem; //46px
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem; //40px
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2rem; //32px
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; //24px
 }
 
 h5 {
@@ -120,11 +116,11 @@ h6 {
 .container {
   position: relative;
   width: 100%;
-  max-width: 2214px;
+  max-width: 1166px;
   margin: 0 auto;
   padding: 0 1.5rem;
   @include respond-to(tablet) {
-      max-width: 1200px;
+      max-width: 100%;
     }
 }
 
@@ -148,24 +144,45 @@ section {
 // BUTTONS
 // ==============================
 .btn {
-  display: inline-block;
-  font-size: 2rem;
-  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem; //12px
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.17;
   text-align: center;
-  text-transform: uppercase;
   white-space: nowrap;
-  color: var(--text-white);
-  background-color: var(--secondary-main);
-  border: 2px solid var(--secondary-main);
-  border-radius: 2.438rem;
-  transition: all 0.3s ease;
-  padding: 16px 24px;
-
+  color: var(--neutrals-0);
+  background: var(--liner-gradient-btn);
+  
+  border-radius: 0.75rem;
+  transition: all var(--transition-duration) ease;
+  padding: 1.25rem 1.5rem;
+  
+  height: 4.25rem; // 68px
   &:hover {
-    color: var(--secondary-main);
-    background-color: transparent;
+    box-shadow: var(--box-shadow-btn);
   }
 }
+
+.btn--with-arrow::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 18px;
+    background-image: url(../../img/btn-arrow-right.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: var(--transition-duration);
+}
+.btn--with-arrow:hover::after {
+    transform: translateX(4px);
+}
+
+// ==============================
+// VISUALLY HIDDEN
+// ==============================
 
 .visually-hidden {
   position: absolute;
@@ -181,66 +198,5 @@ section {
 }
 
 // ==============================
-// BACKGROUND IMAGE
-// ==============================
-.bg__image {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-    }
-    &.bg-small {
-        width: 60%;
-    }
-    &.bg-top {
-        top: 0;
-    }
-    &.bg-bottom {
-        bottom: 0;
-        img {
-          bottom: 0;
-        }
-    }
-    &.bg-bottom-out {
-        bottom: -50%;
-    }
-    &.over-content {
-       z-index: 3;
-    }
-    &.overflow-hidden {
-      overflow: hidden;
-    }
-}
-
-// ==============================
 // GLOBAL SECTIONS ELEMENTS
 // ==============================
-
-.section__title {
-    position: relative;
-    font-size: 4.5rem;
-    text-align: center;
-    color: var(--text-white);
-    padding-bottom: 2.625rem;
-    margin-bottom: 198px;
-    &::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        width: 9rem;
-        height: 1.5rem;
-        background: linear-gradient(90deg, #673AB7 48.76%, #3579C5 100%);
-        border-radius: 1rem;
-        
-    }
-    &.underlined-light::after {
-        background: linear-gradient(169.02deg, #B2EBF2 -58.33%, #D1C4E9 60.57%);
-    }
-}
