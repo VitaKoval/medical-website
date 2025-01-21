@@ -1,0 +1,246 @@
+// ==============================
+// RESET STYLES
+// ==============================
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 1.5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--main-font-family);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--text-secondary-dark-mode);
+  background-color: var(--default-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ==============================
+// GLOBAL STYLES
+// ==============================
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-main);
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  // &:hover {
+  //   color: var(--color-secondary);
+  // }
+}
+
+a, 
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+// ==============================
+// TYPOGRAPHY
+// ==============================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-medium);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+// ==============================
+// UTILITIES
+// ==============================
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 2214px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  @include respond-to(tablet) {
+      max-width: 1200px;
+    }
+}
+
+section {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+// ==============================
+// BUTTONS
+// ==============================
+.btn {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-white);
+  background-color: var(--secondary-main);
+  border: 2px solid var(--secondary-main);
+  border-radius: 2.438rem;
+  transition: all 0.3s ease;
+  padding: 16px 24px;
+
+  &:hover {
+    color: var(--secondary-main);
+    background-color: transparent;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// ==============================
+// BACKGROUND IMAGE
+// ==============================
+.bg__image {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+    }
+    &.bg-small {
+        width: 60%;
+    }
+    &.bg-top {
+        top: 0;
+    }
+    &.bg-bottom {
+        bottom: 0;
+        img {
+          bottom: 0;
+        }
+    }
+    &.bg-bottom-out {
+        bottom: -50%;
+    }
+    &.over-content {
+       z-index: 3;
+    }
+    &.overflow-hidden {
+      overflow: hidden;
+    }
+}
+
+// ==============================
+// GLOBAL SECTIONS ELEMENTS
+// ==============================
+
+.section__title {
+    position: relative;
+    font-size: 4.5rem;
+    text-align: center;
+    color: var(--text-white);
+    padding-bottom: 2.625rem;
+    margin-bottom: 198px;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 9rem;
+        height: 1.5rem;
+        background: linear-gradient(90deg, #673AB7 48.76%, #3579C5 100%);
+        border-radius: 1rem;
+        
+    }
+    &.underlined-light::after {
+        background: linear-gradient(169.02deg, #B2EBF2 -58.33%, #D1C4E9 60.57%);
+    }
+}

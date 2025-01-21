@@ -1,0 +1,46 @@
+:root{
+    //font
+    --main-font-family: 'OpenSans', sans-serif;
+    
+// Text colors
+    --text-white: rgba(255, 255, 255, 100);
+    --text-black: rgba(0, 0, 0, 100);
+    --text-primary: rgba(0, 0, 0, 0.87);
+    --text-secondary: rgba(0, 0, 0, 0.54);
+    --text-secondary-dark-mode: rgba(255, 255, 255, 0.7);
+    --text-disabled: rgba(0, 0, 0, 0.38);
+    --text-field: rgba(0, 0, 0, 0.42);
+
+//Colors
+    --default-dark: #303030;
+    --default-light: #FAFAFA;
+    --default-disabled: #9797973D;
+    --paper-dark: #424242;
+    --primary-main: #673AB7;
+    --secondary-main: #00BCD4;
+    --primary-light: #D1C4E9;
+    --secondary-light: #B2EBF2;
+    --primary-dark: #0D47A1;
+    --secondary-dark: #006064;
+
+    --transition-duration: 0.3s;
+
+    // box-shadow
+    --box-shadow-header: 0 5px 10px rgb(0 0 0 / 25%)
+    --box-shadow-dropdown: 0px 4px 16px rgba(10, 13, 20, 0.32), 0px 16px 56px rgba(10, 13, 20, 0.48), 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+// .container
+//   width: 1674px
+//   max-width: 100%
+//   position: relative
+//   margin-left: auto
+//   margin-right: auto
+//   @media (max-width: 1200px)
+//     width: calc(100% - 52px)
+//   @media (max-width: 880px)
+//     width: calc(100% - 52px)
+
+// .section
+//   position: relative
+//   margin: 0
