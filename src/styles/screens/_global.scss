@@ -36,7 +36,7 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--neutrals-500);
+  color: inherit;
   transition: color var(--transition-duration) ease;
   cursor: pointer;
 }
