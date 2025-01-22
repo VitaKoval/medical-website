@@ -73,11 +73,35 @@
     position: relative;
     width: 50%;
     height: 34.5rem;
-    z-index: -2;
+}
+
+.img__decorate {
+    position: absolute;
+    &.right {
+        max-width: 246px;
+        left: 50%;
+        top: 50%;
+        transform: translate(10%, 0);
+    }
+    &.left {
+        max-width: 296px;
+        top: 50%;
+        right: 50%;
+        transform: translate(-20%, 100%);
+    }
+    &.bottom {
+        max-width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-15%, 96%);
+    }
 }
 
 @include respond-to(tablet) {
     .intro__content {
+        width: 50%;
+    }
+    .img__decorate {
         width: 50%;
     }
 }
