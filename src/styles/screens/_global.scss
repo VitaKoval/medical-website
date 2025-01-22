@@ -84,6 +84,16 @@ h6 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: var(--spacing-medium);
+  span {
+    background: var(--liner-gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+span {
+  color: var(--primary-600);
 }
 
 h1 {
@@ -108,6 +118,32 @@ h5 {
 
 h6 {
   font-size: 1rem;
+}
+
+@include respond-to(tablet) {
+  h1 {
+  font-size: 2.3rem; 
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
 }
 
 // ==============================
@@ -208,3 +244,13 @@ section {
 // ==============================
 // GLOBAL SECTIONS ELEMENTS
 // ==============================
+
+.bg__image svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
