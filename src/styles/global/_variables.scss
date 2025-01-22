@@ -31,10 +31,12 @@
 //Box-shadows
     --box-shadow-btn: -8px 8px 28px rgba(0, 0, 0, 0.06);
     --box-shadow-dropdown: 0px 4px 16px rgba(10, 13, 20, 0.32), 0px 16px 56px rgba(10, 13, 20, 0.48), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --box-shadow-block: 3.12195px 9.36585px 21.8537px rgba(0, 0, 0, 0.06);
 
 //Gradients
     --liner-gradient-btn: linear-gradient(101.91deg, #A7E2FF 0%, #0095DE 87.74%);
     --liner-gradient-text: linear-gradient(100.68deg, #0179B4 20.59%, #88D8FF 86.44%);
+    --radial-gradient-block: radial-gradient(114.87% 113.36% at 40.95% -10.45%, #FFFFFF 32.81%, #F8FDFF 97.64%);
 //Transition
     --transition-duration: 0.2s;
 }
