@@ -190,15 +190,35 @@ section {
   text-align: center;
   white-space: nowrap;
   color: var(--neutrals-0);
-  background: var(--liner-gradient-btn);
-  
   border-radius: 0.75rem;
   transition: all var(--transition-duration) ease;
-  padding: 1.25rem 1.5rem;
-  height: 4.25rem; // 68px
   &:hover {
     box-shadow: var(--box-shadow-btn);
   }
+  &.btn__primary {
+    background: var(--liner-gradient-btn);
+    padding: 1.25rem 1.5rem;
+    height: 4.25rem; // 68px
+  }
+  &.btn__secondary {
+    background: var(--primary-500);
+    padding: 1.125rem 2.25rem;
+    height: 3.75rem; // 60px
+  }
+}
+
+.btn--with-check::after{
+  content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../img/check-box-svg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: var(--transition-duration);
+}
+.btn--with-check:hover::after {
+    transform: scale(1.2);
 }
 
 .btn--with-arrow::after {

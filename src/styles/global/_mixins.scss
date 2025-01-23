@@ -11,9 +11,16 @@
     }
   }
 
+  @else if $breakpoint == bigMobile {
+    @media only screen and (max-width: 812px) {
+      @content;
+    }
+  }
+
   @else if $breakpoint == mobile {
     @media only screen and (max-width: 600px) {
       @content;
     }
   }
 }
+

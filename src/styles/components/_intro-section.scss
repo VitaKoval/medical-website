@@ -104,7 +104,7 @@
     }
 }
 
-@media only screen and (max-width: 812px) {
+@include respond-to(bigMobile) {
     .intro__wrap {
         flex-direction: column-reverse;
     }

@@ -39,7 +39,7 @@
     border-color: var(--primary-200);
     border-radius: 24px;
     box-shadow: var(--box-shadow-block);
-    padding: 40px 40px 52px;
+    padding: 2.5rem 2.5rem 3.25rem;
 }
 
 .services__item:nth-child(1) {
@@ -79,6 +79,7 @@
     line-height: 1.7;
     font-weight: 600;
     color: var(--neutrals-500);
+    text-wrap: balance;
 }
 
 @include respond-to(tablet) {
@@ -92,7 +93,7 @@
     }
 }
 
-@media only screen and (max-width: 812px) {
+@include respond-to(bigMobile) {
     .services__list {
         grid-template-rows: auto auto auto;
     }
