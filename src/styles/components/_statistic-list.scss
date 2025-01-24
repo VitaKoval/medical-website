@@ -1,0 +1,30 @@
+.statistic__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 61.75rem;
+    width: 100%;
+    padding: 2.5rem;
+    margin: 0 auto;
+}
+
+.statistic__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 194px;
+    min-width: 194px;
+    margin: 0 auto;
+
+    .item__title {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.08;
+    }
+    .item__subtitle {
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.7;
+    }
+}
