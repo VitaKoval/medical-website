@@ -35,10 +35,14 @@
 
 //Gradients
     --liner-gradient-btn: linear-gradient(101.91deg, #A7E2FF 0%, #0095DE 87.74%);
+    --liner-gradient-btn-text: linear-gradient(98.64deg, #007DAA 6.59%, #15B2FF 72.16%);
     --liner-gradient-text: linear-gradient(100.68deg, #0179B4 20.59%, #88D8FF 86.44%);
+    --liner-gradient-text-reverse: linear-gradient(98.64deg, #88D8FF 35.04%, #0179B4 93.41%);
     --radial-gradient-block: radial-gradient(114.87% 113.36% at 40.95% -10.45%, #FFFFFF 32.81%, #F8FDFF 97.64%);
     --radial-gradient-block-alternative: radial-gradient(192.09% 498.22% at 0% 12.07%, #EBF8FF 2.36%, #FDFEFF 49.86%);
-//Transition
+    --radial-gradient-block-dark: radial-gradient(114.87% 113.36% at 40.95% -10.45%, #35BDFF 38.13%, #008CD0 100%);
+
+    //Transition
     --transition-duration: 0.2s;
 }
 // .container

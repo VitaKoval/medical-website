@@ -89,7 +89,15 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    
   }
+  .alternative {
+    background: var(--liner-gradient-text-reverse);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
 }
 
 span {
@@ -159,8 +167,16 @@ h6 {
   max-width: 1166px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  &.container--small {
+    max-width: 59.625rem;
+    width: 100%;
+  }
   @include respond-to(tablet) {
       max-width: 100%;
+      &.container--small {
+        max-width: 48rem;
+        width: 100%;
+    }
     }
 }
 
@@ -194,10 +210,11 @@ section {
   text-align: center;
   white-space: nowrap;
   color: var(--neutrals-0);
-  border-radius: 0.75rem;
+  border-radius: 0.75rem; //12px
   transition: all var(--transition-duration) ease;
   &:hover {
     box-shadow: var(--box-shadow-btn);
+    transform: translateY(-2px);
   }
   &.btn__primary {
     background: var(--liner-gradient-btn);
@@ -208,6 +225,22 @@ section {
     background: var(--primary-500);
     padding: 1.125rem 2.25rem;
     height: 3.75rem; // 60px
+  }
+  &.btn__light {
+    color: var(--neutrals-0);
+    background: var(--primary-50);
+    padding: 1rem 1.25rem;
+    height: 3.5rem; // 56px
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    span {
+      background: var(--liner-gradient-btn-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
   }
 }
 
@@ -237,6 +270,17 @@ section {
 }
 .btn--with-arrow:hover::after {
     transform: translateX(4px);
+}
+
+.btn--with-phone::after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url(../../img/btn-phone-svg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: var(--transition-duration);
 }
 
 @include respond-to(mobile) {

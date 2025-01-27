@@ -2,11 +2,6 @@
     padding: 4.25rem 0;
 }
 
-.container__platform {
-    max-width: 59.625rem;
-    width: 100%;
-}
-
 .platform__title {
     text-align: center;
     color: var(--neutrals-900);
@@ -101,10 +96,6 @@
 }
 
 @include respond-to(tablet) {
-    .container__platform {
-        max-width: 48rem;
-        width: 100%;
-    }
     .platform__container {
         flex-direction: column;
         gap: 2rem;

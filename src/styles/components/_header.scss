@@ -51,6 +51,7 @@
     white-space: nowrap;
     &:hover {
         color: var(--primary-700);
+        transform: translateY(-2px);
     }
 }
 
@@ -112,7 +113,7 @@
     .header__nav {
         position: absolute;
         right: -100vw;
-        top: 7.25rem;
+        top: 5.25rem;
         width: 100%;
         height: calc(100vh - 5rem);
         display: flex;
