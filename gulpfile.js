@@ -181,5 +181,8 @@ const ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function () {
   return gulp.src('./build/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({ 
+        remoteUrl: "https://github.com/VitaKoval/VitaKoval.github.io.git",
+        branch: "main"
+      }));
 });
