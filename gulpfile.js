@@ -173,3 +173,13 @@ const serve = () => {
 exports.build = series(build, without_min);
 
 exports.default = serve;
+
+//--------------------- Deploy GitHub Pages -----------------------------//
+
+const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
