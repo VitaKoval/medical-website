@@ -1,0 +1,39 @@
+name: Gulp Build and Deploy
+
+on:
+  push:
+    branches: [ "main" ] # Trigger the workflow when changes are pushed to the "main" branch
+  pull_request:
+    branches: [ "main" ] # Trigger the workflow for pull requests targeting the "main" branch
+  workflow_dispatch: # Allow manual triggering of the workflow from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner for the job
+
+    steps:
+      # 1. Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.20.4 # Specify the Node.js version to use (adjust as needed)
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm ci # Install dependencies using the package-lock.json file
+
+      # 4. Build the project with Gulp
+      - name: Build with Gulp
+        run: npx gulp # Run the Gulp task specified in gulpfile.js
+
+      # 5. (Optional) Deploy the project
+      # Uncomment and configure the following section if deployment is needed
+      # - name: Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: build # Specify the directory with the generated project files
