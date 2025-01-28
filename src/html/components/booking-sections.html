@@ -1,9 +1,9 @@
 <section class="section__booking">
     <div class="container">
         <div class="booking__form">
-            <div class="form__wrap">
+            <div class="form__wrap js-form-container">
                 <h3 class="form__title">Easily book an appointment in 3 simple steps.</h3>
-                <form class="form__primary">
+                <form class="form__primary js-submit-form" data-fields='[{"id": "#email", "required": true}, {"id": "#phone", "required": true}, {"id": "#date", "required": true}]'>
                     <label class="form__label-wrap">
                         <div class="form__label">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@
                         </button>
                     </div>
                 </form>
-                <div class="notification" >
+                <div class="notification js-notification" >
                     <h3 class="form__title">Thank you!</h4>
                     <p>Your form has been submitted.</p>
                 </div>
