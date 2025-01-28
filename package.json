@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",
-    "start-project": "npm install && npm install"
+    "start-project": "npm install && npm install",
+    "deploy": "gulp deploy"
   },
   "author": "expiria",
   "license": "ISC",
