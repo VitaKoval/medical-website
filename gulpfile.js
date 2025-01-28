@@ -176,12 +176,65 @@ exports.default = serve;
 
 //--------------------- Deploy GitHub Pages -----------------------------//
 
+// const gulp = require('gulp');
+// const ghPages = require('gulp-gh-pages');
+
+// gulp.task('deploy', function () {
+//   return gulp.src('./build/**/*')
+//     .pipe(ghPages({
+//       branch: 'gh-pages'
+//     }));
+// });
+
+// const gulp = require('gulp');
+// const { exec } = require('child_process');
+// const pathModule = require('path'); 
+
+// // Завдання для деплою на gh-pages
+// gulp.task('deploy', function (cb) {
+//   const buildPath = pathModule.join(__dirname, 'build');
+
+//   // Виконання Git команд для деплою
+//   exec(`git add .`, { cwd: buildPath }, (err, stdout, stderr) => {
+//     if (err) {
+//       console.error(`exec error: ${err}`);
+//       return;
+//     }
+//     console.log(stdout);
+//     console.error(stderr);
+
+//     // Комітити зміни
+//     exec(`git commit -m "Deploy build"`, { cwd: buildPath }, (err, stdout, stderr) => {
+//       if (err) {
+//         console.error(`exec error: ${err}`);
+//         return;
+//       }
+//       console.log(stdout);
+//       console.error(stderr);
+
+//       // Пушити зміни на gh-pages
+//       exec(`git push origin gh-pages`, { cwd: buildPath }, (err, stdout, stderr) => {
+//         if (err) {
+//           console.error(`exec error: ${err}`);
+//           return;
+//         }
+//         console.log(stdout);
+//         console.error(stderr);
+//         cb(); // Завершуємо таску
+//       });
+//     });
+//   });
+// });
+
 const gulp = require('gulp');
-const ghPages = require('gulp-gh-pages');
+const { execSync } = require('child_process');
 
 gulp.task('deploy', function () {
-  return gulp.src('./build/**/*')
-    .pipe(ghPages({
-      branch: 'gh-pages'
-    }));
+  // Додаємо файли до Git (включаючи ігноровані)
+  execSync('git add -f .', { stdio: 'inherit' });
+
+  // Проводимо commit і push
+  execSync('git commit -m "Deploy to gh-pages"', { stdio: 'inherit' });
+  execSync('git push origin main', { stdio: 'inherit' });
+  execSync('git subtree push --prefix build origin gh-pages', { stdio: 'inherit' });
 });
