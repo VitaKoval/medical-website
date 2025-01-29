@@ -54,3 +54,11 @@
         width: 100%;
     }
 }
+
+@include respond-to(mobile) {
+    .testimonials__item {
+        flex-direction: column;
+        min-width: 14rem;
+        padding: 1.4rem 2rem;
+    }
+}
