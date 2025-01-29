@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",
-    "start-project": "npm install && npm install",
-    "deploy": "gulp deploy"
+    "start-project": "npm install && npm install"
   },
-  "author": "expiria",
+  "author": "Vitakoval",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.0",

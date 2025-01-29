@@ -176,54 +176,13 @@ exports.default = serve;
 
 //--------------------- Deploy GitHub Pages -----------------------------//
 
-var gulp   = require('gulp');
-var deploy = require('gulp-gh-pages');
+// var gulp   = require('gulp');
+// var deploy = require('gulp-gh-pages');
 
-gulp.task('deploy', function () {
-  return gulp.src("./prod/**/*")
-    .pipe(deploy({ 
-      remoteUrl: "https://github.com/VitaKoval/medical-website.git",
-      branch: "gh-pages"
-    }))
-  });
-
-  
-// const gulp = require('gulp');
-// const { exec } = require('child_process');
-// const pathModule = require('path'); 
-
-// // Завдання для деплою на gh-pages
-// gulp.task('deploy', function (cb) {
-//   const buildPath = pathModule.join(__dirname, 'build');
-
-//   // Виконання Git команд для деплою
-//   exec(`git add .`, { cwd: buildPath }, (err, stdout, stderr) => {
-//     if (err) {
-//       console.error(`exec error: ${err}`);
-//       return;
-//     }
-//     console.log(stdout);
-//     console.error(stderr);
-
-//     // Комітити зміни
-//     exec(`git commit -m "Deploy build"`, { cwd: buildPath }, (err, stdout, stderr) => {
-//       if (err) {
-//         console.error(`exec error: ${err}`);
-//         return;
-//       }
-//       console.log(stdout);
-//       console.error(stderr);
-
-//       // Пушити зміни на gh-pages
-//       exec(`git push origin gh-pages`, { cwd: buildPath }, (err, stdout, stderr) => {
-//         if (err) {
-//           console.error(`exec error: ${err}`);
-//           return;
-//         }
-//         console.log(stdout);
-//         console.error(stderr);
-//         cb(); // Завершуємо таску
-//       });
-//     });
+// gulp.task('deploy', function () {
+//   return gulp.src("./prod/**/*")
+//     .pipe(deploy({ 
+//       remoteUrl: "https://github.com/VitaKoval/medical-website.git",
+//       branch: "gh-pages"
+//     }))
 //   });
-// });
