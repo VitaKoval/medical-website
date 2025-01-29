@@ -226,16 +226,3 @@ gulp.task('deploy', function () {
 //     });
 //   });
 // });
-
-// const gulp = require('gulp');
-// const { execSync } = require('child_process');
-
-// gulp.task('deploy', function () {
-//   // Додаємо файли до Git (включаючи ігноровані)
-//   execSync('git add -f .', { stdio: 'inherit' });
-
-//   // Проводимо commit і push
-//   execSync('git commit -m "Deploy to gh-pages"', { stdio: 'inherit' });
-//   execSync('git push origin main', { stdio: 'inherit' });
-//   execSync('git subtree push --prefix build origin gh-pages', { stdio: 'inherit' });
-// });
