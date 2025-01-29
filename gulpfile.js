@@ -176,15 +176,16 @@ exports.default = serve;
 
 //--------------------- Deploy GitHub Pages -----------------------------//
 
-// const gulp = require('gulp');
-// const ghPages = require('gulp-gh-pages');
+var gulp   = require('gulp');
+var deploy = require('gulp-gh-pages');
 
-// gulp.task('deploy', function () {
-//   return gulp.src('./build/**/*')
-//     .pipe(ghPages({
-//       branch: 'gh-pages'
-//     }));
-// });
+gulp.task('deploy', function () {
+  return gulp.src("./prod/**/*")
+    .pipe(deploy({ 
+      remoteUrl: "https://github.com/VitaKoval/medical-website.git",
+      branch: "gh-pages"
+    }))
+  });
 
 // const gulp = require('gulp');
 // const { exec } = require('child_process');
@@ -226,15 +227,15 @@ exports.default = serve;
 //   });
 // });
 
-const gulp = require('gulp');
-const { execSync } = require('child_process');
+// const gulp = require('gulp');
+// const { execSync } = require('child_process');
 
-gulp.task('deploy', function () {
-  // Додаємо файли до Git (включаючи ігноровані)
-  execSync('git add -f .', { stdio: 'inherit' });
+// gulp.task('deploy', function () {
+//   // Додаємо файли до Git (включаючи ігноровані)
+//   execSync('git add -f .', { stdio: 'inherit' });
 
-  // Проводимо commit і push
-  execSync('git commit -m "Deploy to gh-pages"', { stdio: 'inherit' });
-  execSync('git push origin main', { stdio: 'inherit' });
-  execSync('git subtree push --prefix build origin gh-pages', { stdio: 'inherit' });
-});
+//   // Проводимо commit і push
+//   execSync('git commit -m "Deploy to gh-pages"', { stdio: 'inherit' });
+//   execSync('git push origin main', { stdio: 'inherit' });
+//   execSync('git subtree push --prefix build origin gh-pages', { stdio: 'inherit' });
+// });
