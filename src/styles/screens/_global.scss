@@ -247,9 +247,9 @@ section {
 .btn--with-check::after{
   content: "";
     display: block;
-    width: 20px;
-    height: 20px;
-    background-image: url(../../img/check-box-svg.svg);
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url(img/check-box-svg.svg);
     background-size: contain;
     background-repeat: no-repeat;
     transition: var(--transition-duration);
@@ -261,9 +261,9 @@ section {
 .btn--with-arrow::after {
     content: "";
     display: block;
-    width: 12px;
-    height: 18px;
-    background-image: url(../../img/btn-arrow-right.svg);
+    width: 0.75rem;
+    height: 1.125rem;
+    background-image: url(img/btn-arrow-right.svg);
     background-size: contain;
     background-repeat: no-repeat;
     transition: var(--transition-duration);
@@ -277,7 +277,7 @@ section {
     display: block;
     width: 22px;
     height: 22px;
-    background-image: url(../../img/btn-phone-svg.svg);
+    background-image: url(img/btn-phone-svg.svg);
     background-size: contain;
     background-repeat: no-repeat;
     transition: var(--transition-duration);
