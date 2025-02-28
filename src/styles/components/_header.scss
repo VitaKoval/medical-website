@@ -3,8 +3,8 @@
     top: 0;
     width: 100%;
     background-color: var(--neutrals-0);
-    z-index: 10;
-    padding: 3rem 0;
+    z-index: 100;
+    // padding: 3rem 0;
     transition: 0.25s;
 }
 
@@ -14,6 +14,8 @@
     justify-content: space-between;
     gap: 5rem;
     width: 100%;
+    padding: 3rem 0;
+    background-color: var(--neutrals-0);
 }
 
 .header__logo {
@@ -21,6 +23,7 @@
     max-width: 10.5rem; //168px
     width: 100%;
     height: auto;
+    // z-index: 11;
     img {
         width: 100%;
         height: auto;
@@ -55,10 +58,10 @@
 }
 
 .header__burger {
+    position: relative;
     display: none;
     width: 2rem;
     height: 2rem;
-    position: relative;
     cursor: pointer;
     .burger__line {
         position: absolute;
@@ -105,22 +108,25 @@
 
 //1072px
 @include respond-to(tablet) {
+    .header__inner {
+        padding: 1rem 0;
+    }
+
     .header__burger {
       display: flex;
     }
 
     .header__nav {
         position: absolute;
+        top: 5rem;
         right: -100vw;
-        top: 5.25rem;
         width: 100%;
         height: calc(100vh - 5rem);
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: flex-start;
         gap: 3.5rem;
-        padding: 4rem 1rem;
+        padding: 4rem 1.5rem;
         background-color: var(--neutrals-0);
         transition: var(--transition-duration);
         overflow-y: auto;
