@@ -8,6 +8,17 @@ const actions = document.querySelector('.header__action');
 const navigation = document.querySelector('.header__nav');
 const wrapper = document.querySelector('.header__inner');
 
+// Datepicker - Flatpickr
+document.addEventListener("DOMContentLoaded", function () {
+  flatpickr("#dateInput", {
+    enableTime: false,
+    dateFormat: "F-d-Y", 
+    minDate: "today",
+    disableMobile: true,
+    theme: "material_blue"
+  });
+});
+
 
 // Toggle burger menu
 burger.addEventListener("click", function () {
@@ -37,6 +48,30 @@ function moveActions() {
 // Initial check and on resize
 moveActions(); // Run on load
 window.addEventListener("resize", moveActions); // Run on resize
+
+//Custom Date Picker
+const dateInput = document.querySelector(".js-dateInput");
+const calendar = document.getElementById("calendar");
+const realDateInput = document.getElementById("realDateInput");
+
+dateInput.addEventListener("click", () => {
+  calendar.style.display = "block";
+  realDateInput.focus();
+
+  console.log('Click!');
+  console.log(calendar.style.display);
+});
+
+realDateInput.addEventListener("change", (e) => {
+  dateInput.value = e.target.value;
+  calendar.style.display = "none";
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".datepicker")) {
+    calendar.style.display = "none";
+  }
+});
 
 //Submit forms
 const forms = document.querySelectorAll(".js-submit-form");
