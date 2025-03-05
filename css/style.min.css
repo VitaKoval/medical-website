@@ -786,15 +786,35 @@ footer {
   font-style: normal;
   font-size: 1rem;
   transition: var(--transition-duration);
+  outline: none;
 }
 .form__primary input::placeholder {
   color: var(--neutrals-100);
+}
+.form__primary .select {
+  cursor: pointer;
 }
 .form__primary .empty-field {
   border-color: red;
 }
 .form__primary.hidden {
   opacity: 0;
+}
+
+.datepicker {
+  position: relative;
+  display: inline-block;
+}
+
+.calendar {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 5px;
 }
 
 @media only screen and (max-width: 67rem) {
